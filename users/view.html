@@ -1,0 +1,69 @@
+
+<?php
+session_start();
+?>
+
+
+<!DOCTYPE html>
+
+<?php
+echo "Welcome" . $_SESSION['username'];
+?>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="Dashboard">
+    <meta name="keyword" content="Dashboard, Bootstrap, Admin, Template, Theme, Responsive, Fluid, Retina">
+
+    <title>CMS | user view</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap.css" rel="stylesheet">      
+    <!-- Custom styles for this template -->
+    <link href="assets/css/style.css" rel="stylesheet">
+    <link href="assets/css/style-responsive.css" rel="stylesheet">
+  </head>
+
+  <body>
+
+      <div id="login-page">
+        <div class="container">
+        
+              <form class="form-login" name="login" method="post" onsubmit="" action="logout.html">
+                <h2 class="form-login-heading">Register</h2>
+<br><br><br>
+
+
+<br><br><br>
+                    
+                            <a  href="team1.html"><button class="btn btn-themes btn-block" name="submit" type="button" onclick="" ><i class="fa fa-lock" >      Team  Games</i> </button>  </a>
+        
+<br><br><br>
+                        <a  href="individual1.html"> <button class="btn btn-themes btn-block" name="submit" type="button" onclick="" ><i class="fa fa-lock" >     Individual  Games </i> </button>  </a>
+<br><br><br>
+
+<br><br><br>
+<button class="btn btn-theme btn-block" name="submit" type="submit" ><i class="fa fa-lock" ></i> LOGOUT</button>
+                   </form>
+                        
+        
+        </div>
+      </div>
+
+    <!-- js placed at the end of the document so the pages load faster -->
+    <script src="assets/js/jquery.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+
+    <!--BACKSTRETCH-->
+    <!-- You can use an image of whatever size. This script will stretch to fit in any screen size.-->
+    <script type="text/javascript" src="assets/js/jquery.backstretch.min.js"></script>
+    <script>
+        $.backstretch("assets/img/login-bg.jpg", {speed: 500});
+    </script>
+
+
+  </body>
+</html>

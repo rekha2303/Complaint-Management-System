@@ -1,0 +1,85 @@
+	<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="Dashboard">
+    <meta name="keyword" content="Dashboard, Bootstrap, Admin, Template, Theme, Responsive, Fluid, Retina">
+
+    <title>CMS | User Registration</title>
+    <link href="assets/css/bootstrap.css" rel="stylesheet">
+    <link href="assets/font-awesome/css/font-awesome.css" rel="stylesheet" />
+    <link href="assets/css/style.css" rel="stylesheet">
+    <link href="assets/css/style-responsive.css" rel="stylesheet">
+    
+    	<script>
+function userAvailability() {
+$("#loaderIcon").show();
+jQuery.ajax({
+url: "check_availability.php",
+data:'email='+$("#email").val(),
+type: "POST",
+success:function(data){
+$("#user-availability-status1").html(data);
+$("#loaderIcon").hide();
+},
+error:function (){}
+});
+}
+
+
+
+
+
+</script>
+  </head>
+
+  <body>
+	  <div id="login-page">
+	  	<div class="container">
+	  	
+		      <form class="form-login"  action="u.php" method="post">
+		        <h2 c lass="form-login-heading">Team</h2>
+		        <p style="padding-left: 1%; color: green">
+		        	
+
+		        </p>
+		        <div class="login-wrap">
+		         <input id="userid" type="text" class="form-control" placeholder="Team name" name="teamname" required="required" autofocus>
+		            <br>
+
+		            <input id="fname" type="text" class="form-control" placeholder="Game name" name="games" required="required" autofocus>
+		            <br>
+		            <input type="number" class="form-control" placeholder="Number of team members" name="members" required="required">
+		            <br>
+		            <br>
+		            
+		            <button class="btn btn-theme btn-block"  type="submit" name="submit" id="submit"><i class="fa fa-user" ></i> confirm</button>
+		            <hr>
+          
+		            
+		        </div>
+		
+		      
+		
+		      </form>	  	
+	  	
+	  	</div>
+	  </div>
+
+    <!-- js placed at the end of the document so the pages load faster -->
+    <script src="assets/js/jquery.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+
+    <!--BACKSTRETCH-->
+    <!-- You can use an image of whatever size. This script will stretch to fit in any screen size.-->
+    <script type="text/javascript" src="assets/js/jquery.backstretch.min.js"></script>
+    <script>
+        $.backstretch("assets/img/login-bg.jpg", {speed: 500});
+    </script>
+
+
+	
+</body>
+</html>
